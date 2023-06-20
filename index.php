@@ -5,20 +5,21 @@ class Movie {
     public $genere;
     public $lingua;
 
+    function __construct($_nome, $_genere, $_lingua)
+    {
+        $this->nome = $_nome;
+        $this->genere = $_genere;
+        $this->lingua = $_lingua;
+    }
+
     public function getInfo(){
         return  $this->nome . " " . $this->genere . " " . $this->lingua ;
     }
 }
 
-$batman = new Movie;
-$batman ->nome = "Batman Il Cavaliere Oscuro";
-$batman ->genere = "Azione";
-$batman ->lingua = "IT";
+$batman = new Movie("Batman Il Cavaliere Oscuro", "Azione", "IT");
 
-$diablo = new Movie;
-$batman ->nome = "Diablo 3";
-$batman ->genere = "Splatter";
-$batman ->lingua = "EN";
+$diablo = new Movie("Diablo 4", "Splatter", "EN");
 
 ?>
 
@@ -34,7 +35,8 @@ $batman ->lingua = "EN";
 
     <?php 
     
-     echo $batman->getInfo()
+     echo $batman->getInfo();
+     echo $diablo->getInfo();
 
     ?>
     
