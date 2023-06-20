@@ -33,12 +33,10 @@ $diablo = new Movie("Diablo 4", "Splatter", "EN");
 </head>
 <body>
 
-    <?php 
+    <?php echo $batman->getInfo(); ?>
     
-     echo $batman->getInfo();
-     echo $diablo->getInfo();
+    <?php echo "<br>" . $diablo->getInfo(); ?>
 
-    ?>
     
 </body>
 </html>
